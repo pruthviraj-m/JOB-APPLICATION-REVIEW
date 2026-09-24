@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>TalentMatch — Recruitment Analytics</title>
+<style>
+:root{--bg:#f4f6fa;--card:#fff;--nav:#151a2c;--text:#18243a;--muted:#6c7890;--line:#e5e9f0;--purple:#5b5ce2;--purple2:#7778ee;--green:#18a875;--orange:#f2a516;--blue:#3d82ed;--red:#e85b69}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--text)}
+.app{min-height:100vh;display:flex}.side{width:245px;position:fixed;inset:0 auto 0 0;background:var(--nav);color:#fff;padding:28px 18px}
+.logo{font-size:21px;font-weight:800;padding:0 17px 29px}.logo b{color:#8587f4}.nav a{display:block;text-decoration:none;color:#aeb6cc;padding:12px 16px;margin:5px 0;border-radius:10px;font-size:14px}.nav a.active{background:#2a3043;color:#fff}.sidefoot{position:absolute;bottom:27px;left:34px;color:#7e879f;font-size:11px;line-height:1.65}
+.main{margin-left:245px;width:calc(100% - 245px);padding:31px 36px 42px}.head{display:flex;justify-content:space-between;align-items:center;margin-bottom:25px}.head h1{margin:0;font-size:28px}.sub{font-size:13px;color:var(--muted);margin-top:6px}.actions button{padding:10px 14px;border-radius:9px;border:1px solid var(--line);background:#fff;font-weight:650;margin-left:8px}.actions .primary{background:var(--purple);border-color:var(--purple);color:#fff}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{background:var(--card);border:1px solid var(--line);border-radius:15px;box-shadow:0 8px 26px rgba(25,35,60,.055)}.kpi{padding:19px}.kpiTop{display:flex;justify-content:space-between;align-items:center}.label{font-size:11px;font-weight:750;color:var(--muted);letter-spacing:.25px}.ico{width:37px;height:37px;border-radius:10px;display:grid;place-items:center}.i1{background:#eeeeff}.i2{background:#e9f7f1}.i3{background:#fff4dc}.i4{background:#eaf2ff}.val{font-size:28px;font-weight:800;margin-top:13px}.note{font-size:11px;color:var(--green);font-weight:650;margin-top:6px}
+.row{display:grid;grid-template-columns:1.45fr 1fr;gap:18px;margin-top:18px}.panel{padding:20px}.pt{font-size:15px;font-weight:800}.ps{font-size:11px;color:var(--muted);margin:5px 0 17px}
+.bars{height:225px;display:flex;align-items:flex-end;gap:28px;padding:10px 12px 0;border-bottom:1px solid var(--line)}.bw{height:100%;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:7px}.bar{width:48px;background:linear-gradient(180deg,var(--purple2),var(--purple));border-radius:7px 7px 2px 2px}.bv{font-size:10px;font-weight:750}.bl{font-size:10px;color:var(--muted)}
+.skills{display:flex;flex-direction:column;gap:15px}.sr{display:grid;grid-template-columns:108px 1fr 28px;gap:10px;align-items:center;font-size:12px}.track{height:8px;background:#edf0f5;border-radius:20px}.fill{height:100%;border-radius:20px;background:linear-gradient(90deg,var(--purple),var(--purple2))}
+.bottom{display:grid;grid-template-columns:1.45fr 1fr;gap:18px;margin-top:18px}.table{width:100%;border-collapse:collapse;font-size:11.5px}.table th,.table td{text-align:left;padding:11px 8px;border-bottom:1px solid var(--line);white-space:nowrap}.table th{font-size:10px;color:var(--muted)}.score{font-weight:800;color:var(--purple)}.badge{padding:5px 8px;border-radius:20px;font-size:10px;font-weight:750}.short{background:#e8f7f0;color:#16815e}.review{background:#fff2d8;color:#a36d00}.status{display:flex;align-items:center;gap:10px;margin:15px 0;font-size:12px}.status span:nth-child(2){flex:1}.dot{width:9px;height:9px;border-radius:50%}.footnote{font-size:10px;color:var(--muted);margin-top:17px;line-height:1.5}
+@media(max-width:1050px){.kpis{grid-template-columns:repeat(2,1fr)}.row,.bottom{grid-template-columns:1fr}}@media(max-width:700px){.side{display:none}.main{margin:0;width:100%;padding:20px}.kpis{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="side">
+<div class="logo">Talent<span>Match</span></div>
+<div class="nav">
+<a class="active">Overview</a><a>Candidates</a><a>Jobs</a><a>Applications</a><a>Skill Matching</a><a>Analytics</a>
+</div>
+<div class="sidefoot">Job Portal Skill-Matching &<br>Recruitment Analytics System<br><br>HTML • CSS • JavaScript<br>Node.js • Express • MongoDB</div>
+</aside>
+<main class="main">
+<div class="head"><div><h1>Recruitment Analytics</h1><div class="sub">Dataset-driven demonstration • Job Recommendation Dataset</div></div><div class="actions"><button onclick="window.print()">Export / Print</button><button class="primary">+ Post Job</button></div></div>
+
+<div class="kpis">
+<div class="card kpi"><div class="kpiTop"><span class="label">UNIQUE CANDIDATES</span><span class="ico i1">👥</span></div><div class="val">6</div><div class="note">from displayed dataset sample</div></div>
+<div class="card kpi"><div class="kpiTop"><span class="label">UNIQUE JOBS</span><span class="ico i2">💼</span></div><div class="val">6</div><div class="note">job IDs in displayed sample</div></div>
+<div class="card kpi"><div class="kpiTop"><span class="label">RECORDS ANALYZED</span><span class="ico i3">▤</span></div><div class="val">6</div><div class="note">candidate–job pairs</div></div>
+<div class="card kpi"><div class="kpiTop"><span class="label">AVG. RELEVANCE</span><span class="ico i4">🎯</span></div><div class="val">30.83%</div><div class="note">dataset relevance_score</div></div>
+</div>
+
+<div class="row">
+<div class="card panel"><div class="pt">Job Roles in Dataset</div><div class="ps">Frequency across the six sample records shown in the PPT</div>
+<div class="bars">
+<div class="bw"><div class="bv">2</div><div class="bar" style="height:67%"></div><div class="bl">Data Analyst</div></div>
+<div class="bw"><div class="bv">3</div><div class="bar" style="height:100%"></div><div class="bl">AI Engineer</div></div>
+<div class="bw"><div class="bv">1</div><div class="bar" style="height:34%"></div><div class="bl">Software Engineer</div></div>
+</div></div>
+<div class="card panel"><div class="pt">Most Demanded Skills</div><div class="ps">Frequency of skills in skills_required</div>
+<div class="skills">
+<div class="sr"><span>NLP</span><div class="track"><div class="fill" style="width:100%"></div></div><b>2</b></div>
+<div class="sr"><span>UI/UX Design</span><div class="track"><div class="fill" style="width:50%"></div></div><b>1</b></div>
+<div class="sr"><span>JavaScript</span><div class="track"><div class="fill" style="width:50%"></div></div><b>1</b></div>
+<div class="sr"><span>Python</span><div class="track"><div class="fill" style="width:50%"></div></div><b>1</b></div>
+<div class="sr"><span>Azure</span><div class="track"><div class="fill" style="width:50%"></div></div><b>1</b></div>
+<div class="sr"><span>Docker</span><div class="track"><div class="fill" style="width:50%"></div></div><b>1</b></div>
+</div></div>
+</div>
+
+<div class="bottom">
+<div class="card panel"><div class="pt">Candidate–Job Records</div><div class="ps">Sample rows reproduced from the project presentation</div>
+<table class="table"><thead><tr><th>CANDIDATE</th><th>JOB ID</th><th>ROLE</th><th>RELEVANCE</th><th>LOCATION</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>4603</td><td>Data Analyst</td><td class="score">20%</td><td>Alexandria</td></tr>
+<tr><td>2</td><td>8122</td><td>AI Engineer</td><td class="score">0%</td><td>Ismailia</td></tr>
+<tr><td>3</td><td>5105</td><td>Data Analyst</td><td class="score">75%</td><td>Mansoura</td></tr>
+<tr><td>4</td><td>10419</td><td>AI Engineer</td><td class="score">10%</td><td>Suez</td></tr>
+<tr><td>5</td><td>2320</td><td>AI Engineer</td><td class="score">35%</td><td>Alexandria</td></tr>
+<tr><td>6</td><td>4617</td><td>Software Engineer</td><td class="score">45%</td><td>Fayoum</td></tr>
+</tbody></table>
+<div class="footnote">Source: Kaggle Job Recommendation Dataset. This demonstration uses the six sample records displayed in the project PPT; the percentages above are the dataset's relevance_score values.</div>
+</div>
+
+<div class="card panel"><div class="pt">Match Insights</div><div class="ps">Skill-based matching follows the methodology in the PPT</div>
+<div class="status"><i class="dot" style="background:#18a875"></i><span>Example match score</span><b>66.67%</b></div>
+<div class="footnote">Candidate skills: Python, MongoDB, HTML<br>Job requirements: Python, MongoDB, Node.js<br><br>Matching skills: Python + MongoDB = 2 of 3 required skills → <b>66.67%</b>.</div>
+<div class="footnote">Note: <b>relevance_score</b> is the dataset field. The <b>match percentage</b> is the separate skill-overlap calculation proposed in the methodology.</div>
+</div>
+</div>
+</main></div>
+</body>
+</html>
